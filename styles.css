@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: burlywood;
+    overflow: hidden;
+    user-select: none;
+}
+
+form {
+    width: 250px;
+    margin: auto;
+    margin-top: 15%;
+    text-align: center;
+
+}
+
+fieldset {
+    color: rgb(255, 198, 124);
+    background: #097FCE;
+    background: -moz-linear-gradient(left, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    background: -webkit-linear-gradient(left, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    background: linear-gradient(to right, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    border-radius: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 250px;
+    margin: auto;
+    margin-top: 15%;
+    text-align: center;
+
+}
+
+fieldset {
+    color: rgb(255, 198, 124);
+    background: #097FCE;
+    background: -moz-linear-gradient(left, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    background: -webkit-linear-gradient(left, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    background: linear-gradient(to right, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    border-radius: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: burlywood;
+    overflow: hidden;
+    user-select: none;
+    font-family: Arial, sans-serif;
+}
+
+/* לא לגעת בקובץ עכשיו */
+form {
+    width: 250px;
+    margin: auto;
+    margin-top: 15%;
+    text-align: center;
+
+}
+
+#logoContaner{
+    display: flex;
+    justify-content: center;
+}
+
+#logo{
+    position: absolute;
+    margin-top: 5%;
+    width: 400px;
+}
+
+fieldset {
+    color: lemonchiffon;
+    background: -moz-linear-gradient(left, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    background: -webkit-linear-gradient(left, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    background: linear-gradient(to right, #097FCE 0%, #2D38A4 50%, #6823C5 100%);
+    border-radius: 30px;
+    box-shadow: 0px 6px 15px -5px #000000;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 300px;
+    margin: auto;
+    margin-top: 15%;
+    text-align: center;
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    background-color: rgb(242, 242, 242);
+
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+#error-messages {
+    color: red;
+}
+
+.note {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    padding: 25px;
+    background-color: rgb(255, 250, 205);
+    box-shadow: 0px 6px 15px -5px #000000;
+    font-family: Cursive, 'Guttman yad-brush regular';
+    word-wrap: break-word;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.note:focus {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: default;
+}
+
+.toolbarBtn {
+    background-color: antiquewhite;
+    box-shadow: 0px 6px 15px -5px #000000;
+    height: 50px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.noteActionBtn {
+    margin: 5px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.toolbarBtn:hover,
+.noteActionBtn:hover {
+    background-color: lightblue;
+}
+
+#board {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-color: antiquewhite;
+    box-shadow: 0px 6px 15px -5px #000000;
+    cursor: grab;
+}
+
+#board:active {
+    cursor: grabbing;
+}
+
+#toolbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: fit-content;
+    top: 50px;
+    left: 20px;
+    margin: auto;
+    background-color: white;
+}
+
+*[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+#editNote {
+    left: 0;
+    background-image: url(./icons/edit.svg);
+}
+
+#deleteNote {
+    right: 0;
+    background-image: url(./icons/delete.svg);
+}
+#error-messages {
+    color: red;
+}
+
+.note {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    padding: 25px;
+    background-color: lemonchiffon;
+    box-shadow: 0px 6px 15px -5px #000000;
+    font-family: Cursive, 'Guttman yad-brush regular';
+    word-wrap: break-word;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.note:focus {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    cursor: default;
+}
+
+.toolbarBtn {
+    background-color: antiquewhite;
+    box-shadow: 0px 6px 15px -5px #000000;
+    height: 50px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.noteActionBtn {
+    margin: 5px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.toolbarBtn:hover,
+.noteActionBtn:hover {
+    background-color: lightblue;
+}
+
+#board {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    background-color: antiquewhite;
+    box-shadow: 0px 6px 15px -5px #000000;
+    cursor: grab;
+}
+
+#board:active {
+    cursor: grabbing;
+}
+
+#toolbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: fit-content;
+    top: 50px;
+    left: 20px;
+    margin: auto;
+    background-color: white;
+}
+
+*[contenteditable] {
+    outline: 0px solid transparent;
+}
+
+#editNote {
+    left: 0;
+    background-image: url(./icons/edit.svg);
+}
+
+#deleteNote {
+    right: 0;
+    background-image: url(./icons/delete.svg);
+}

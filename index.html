@@ -1,1 +1,82 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <main id="app"></main>
+
+    <template class="page" id="main">
+        <div id="board"></div>
+
+        <div id="toolbar">
+            <div class="toolbarBtn" id="addNote">
+                <img src="./icons/add.svg" title="Add new note">
+            </div>
+            <div class="toolbarBtn" id="centerBoard">
+                <img src="./icons/focus.svg" title="Return board to center">
+            </div>
+            <div class="toolbarBtn" id="logOut" title="Log out">
+                <img src="./icons/logout.svg" page-target="login">
+            </div>
+        </div>
+
+        <div id="editNote" class="noteActionBtn" contenteditable="false"></div>
+        <div id="deleteNote" class="noteActionBtn" contenteditable="false"></div>
+    </template>
+
+    <template class="page" id="register">
+        <div id="logoContaner"><img src="logo1.png" alt="logo" id="logo"></div>
+        <form id="register-form" page-target="main">
+            <fieldset>
+                <h1>Register</h1>
+                <label for="name"> Name: <br>
+                    <input type="text" name="name" id="name" required>
+                </label> <br>
+                <label for="name"> Password: <br>
+                    <input type="password" name="password" id="passwprd" required>
+                </label> <br> <br>
+                <input type="submit" value="Register"><br>
+            </fieldset><br>
+            Already have an account? <a href="#" page-target="login">Log in!</a>
+            <br><br>
+            <div id="error-messages" style="display:none">This name is already taken. Please try another name.</div>
+        </form>
+        
+    </template>
+    
+    <template class="page" id="login">
+        <div id="logoContaner"><img src="logo1.png" alt="logo" id="logo"></div>
+        <form id="login-form" page-target="main">
+            <fieldset>
+                <h1>Login</h1>
+                <label for="name"> Name:<br>
+                    <input type="text" name="name" id="name" required>
+                </label> <br>
+                <label for="name"> Password:<br>
+                    <input type="password" name="password" id="passwprd" required>
+                </label> <br> <br>
+                <input type="submit" value="Login"><br>
+            </fieldset> <br>
+            Don't yet have an account? <a href="#" page-target="register">Register!</a>
+            <br><br>
+            <div id="error-messages" style="display:none">Name or Password are not correct. Please try again.</div>
+        </form>
+    </template>
+
+    <script src="./notes.js" type="module"></script>
+    <script src="./app.js" type="module"></script>
+    <script src="./Modules/DB.js" type="module"></script>
+    <script src="./Modules/Network.js" type="module"></script>
+    <script src="./Modules/Server.js" type="module"></script>
+</body>
+
+
+</html>
