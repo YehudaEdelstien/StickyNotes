@@ -122,9 +122,11 @@ function editNote({ target }) {
     }
     hideNoteActions()
     target.setAttribute('contenteditable', true);
-    setEndOfContenteditable(target);
-    target.focus();
-    target.addEventListener('focusout', deslectNote);
+    setTimeout(() => {
+        target.focus();
+        setEndOfContenteditable(target);
+        target.addEventListener('focusout', deslectNote);
+    }, 0)
 }
 
 function setEndOfContenteditable(elem) {
