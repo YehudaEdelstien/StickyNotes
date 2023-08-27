@@ -34,7 +34,7 @@ export function initializeBoard() {
     addEventListeners();
 
     boardElements = [];
-    boardElements.push({ element: board, xpos: 0, yPos: 0 })
+    boardElements.push({ element: board, xPos: 0, yPos: 0 })
     initializeNotesFromDB();
     hideNoteActions();
     centerBoard();
@@ -53,6 +53,7 @@ function addEventListeners() {
     document.getElementById("logOut").addEventListener('click', logOut);
     document.addEventListener('mousedown', click);
     document.addEventListener('mouseover', mouseOver)
+    document.addEventListener('wheel', scrollBoard)
 }
 
 function initializeNotesFromDB() {
@@ -94,10 +95,10 @@ function selectElement(e, target = undefined) {
         y: e.clientY - target.offsetTop
     }
 
-    document.addEventListener('mousemove', moveNote);
-    document.addEventListener('mouseup', releaseNote);
+    document.addEventListener('mousemove', moveElement);
+    document.addEventListener('mouseup', releaseElement);
 
-    function moveNote(e) {
+    function moveElement(e) {
         const xPos = e.clientX - offset.x;
         const yPos = e.clientY - offset.y;
 
@@ -108,9 +109,9 @@ function selectElement(e, target = undefined) {
         targetObj.yPos = yPos;
     }
 
-    function releaseNote(e) {
-        document.removeEventListener('mousemove', moveNote);
-        document.removeEventListener('mouseup', releaseNote);
+    function releaseElement(e) {
+        document.removeEventListener('mousemove', moveElement);
+        document.removeEventListener('mouseup', releaseElement);
         app.changeNoteData(targetObj);
     }
 }
@@ -169,8 +170,25 @@ function hideNoteActions() {
 }
 
 function centerBoard() {
-    board.style.left = (window.innerWidth / 2) - (board.offsetWidth / 2) + "px";
-    board.style.top = (window.innerHeight / 2) - (board.offsetHeight / 2) + "px";
+    const boardObj = boardElements[0];
+
+    boardObj.xPos += (window.innerWidth / 2) - (board.offsetWidth / 2);
+    boardObj.yPos += (window.innerHeight / 2) - (board.offsetHeight / 2);
+
+    repositionBoard(boardObj.xPos, boardObj.yPos)
+}
+
+function scrollBoard({deltaY}) {
+    const boardObj = boardElements[0];
+
+    boardObj.yPos -= deltaY;
+
+    repositionBoard(boardObj.xPos, boardObj.yPos)
+}
+
+function repositionBoard(x, y) {
+    board.style.left = x + "px";
+    board.style.top = y + "px";
 }
 
 function logOut(e) {
