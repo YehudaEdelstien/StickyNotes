@@ -197,7 +197,6 @@ function logOut(e) {
 }
 
 function click(e) {
-
     if (app.getCurrentUser() == null) {
         return;
     }
